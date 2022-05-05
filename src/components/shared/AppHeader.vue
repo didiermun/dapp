@@ -1,42 +1,24 @@
 <script>
 import ThemeSwitcher from '../ThemeSwitcher';
-import WallectConnectModal from '../WallectConnectModal.vue';
+import WalletConnectModal from '../WalletConnectModal.vue';
+import UserAccountModal from '../UserAccountModal.vue';
 import feather from 'feather-icons';
 import AppHeaderLinks from './AppHeaderLinks.vue';
 
 export default {
 	components: {
 		ThemeSwitcher,
-		WallectConnectModal,
+		WalletConnectModal,
 		AppHeaderLinks,
+		UserAccountModal,
 	},
 	data() {
 		return {
 			isOpen: false,
 			theme: '',
 			modal: false,
-			categories: [
-				{
-					id: 1,
-					value: 'web',
-					name: 'Web Application',
-				},
-				{
-					id: 2,
-					value: 'mobile',
-					name: 'Mobile Application',
-				},
-				{
-					id: 3,
-					value: 'ui-ux',
-					name: 'UI/UX Design',
-				},
-				{
-					id: 4,
-					value: 'branding',
-					name: 'Branding & Anim',
-				},
-			],
+			walletModal: false,
+			counter: 0,
 		};
 	},
 
@@ -52,17 +34,26 @@ export default {
 			this.theme = theme;
 		},
 		showModal() {
-			if (this.modal) {
+			if (this.modal || this.walletModal) {
 				// Stop screen scrolling
 				document
 					.getElementsByTagName('html')[0]
 					.classList.remove('overflow-y-hidden');
 				this.modal = false;
+				this.walletModal = false;
 			} else {
 				document
 					.getElementsByTagName('html')[0]
 					.classList.add('overflow-y-hidden');
-				this.modal = true;
+					if(this.counter === 0){
+						this.modal  = true;
+						this.counter = 1;
+					}
+					else{
+						this.walletModal = true;
+						this.counter = 0;
+					}
+				// this.modal = true;
 			}
 		},
 	},
@@ -158,12 +149,17 @@ export default {
 		</div>
 
 		<!-- Hire me modal -->
-		<WallectConnectModal
+		<WalletConnectModal
 			:showModal="showModal"
 			:modal="modal"
-			:categories="categories"
-			aria-modal="Hire Me Modal"
+			aria-modal="Wallet Connect"
 		/>
+		<UserAccountModal
+			:showModal="showModal"
+			:modal="walletModal"
+			aria-modal="User Account"
+		/>
+		
 	</nav>
 	
 </template>
