@@ -15,12 +15,13 @@ module.exports = {
 				'primary-light': '#FFFF',
 				'secondary-light': '#F3F3F3',
 				'ternary-light': '#FFFFFF',
-				'dark-blue-light': '#00032A',
+				'dark-blue-light': '#E6E6E6',
+				
 
 				'primary-dark': '#00032A',
 				'secondary-dark': '#080A3E',
 				'ternary-dark': '#FFFFFF',
-				'dark-blue-dark': '#E6E6E6',
+				'dark-blue-dark': '#00032A',
 
 				'dense-red': '#E20267',
 			},

@@ -1,9 +1,9 @@
 <script>
 import feather from 'feather-icons';
-import Button from './reusable/Button.vue';
+// import Button from './reusable/Button.vue';
 export default {
 	props: ['showModal', 'modal', 'categories'],
-	components: { Button },
+	// components: { Button },
 	data() {
 		return {};
 	},

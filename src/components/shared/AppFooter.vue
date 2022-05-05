@@ -10,25 +10,19 @@ export default {
 					id: 1,
 					name: 'GitHub',
 					icon: 'github',
-					url: 'https://github.com/realstoman',
+					url: 'https://github.com/didiermun',
 				},
 				{
 					id: 2,
 					name: 'Twitter',
 					icon: 'twitter',
-					url: 'https://twitter.com/realstoman',
-				},
-				{
-					id: 3,
-					name: 'Medium',
-					icon: 'book',
-					url: 'https://stoman.medium.com',
+					url: 'https://twitter.com/mun_didier',
 				},
 				{
 					id: 4,
 					name: 'Instagram',
 					icon: 'instagram',
-					url: 'https://instagram.com/realstoman',
+					url: 'https://instagram.com/mun_didier',
 				},
 			],
 		};

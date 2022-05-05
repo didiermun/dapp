@@ -14,7 +14,7 @@
             <div class="mt-6 flex flex-col gap-4">
             <div class="flex flex-col">
                 <div class="flex gap-4 w-full">
-                    <input type="text" value="0" class="bg-dark-blue-light border-none dark:bg-primary-dark w-4/6 rounded-lg text-primary-dark dark:text-primary-light">
+                    <input type="text" value="0" class="bg-primary-light border-none dark:bg-primary-dark w-4/6 rounded-lg text-primary-dark dark:text-primary-light">
                     <button class="bg-primary-dark rounded-3xl border-2 border-dense-red text-primary-light w-2/6 font-semibold">Approve LP</button>
                 </div>
                 <div class="flex w-4/6 justify-between py-2">
@@ -37,7 +37,7 @@
             </div>
 
             <div class="flex gap-6 px-0 mt-3">
-                <p class="text-primary-dark dark:text-ternary-light">ACTUAL REWARD APR <span class="mx-3 bg-dark-blue-light border-none dark:bg-primary-dark px-4 py-1 rounded-lg">235.4%</span></p>
+                <p class="text-primary-dark dark:text-ternary-light">ACTUAL REWARD APR <span class="mx-3 bg-primary-light border-none dark:bg-primary-dark px-4 py-1 rounded-lg">235.4%</span></p>
             </div>
         </div>
     </div>
