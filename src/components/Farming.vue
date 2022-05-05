@@ -1,13 +1,13 @@
 <template>
 <div class="flex justify-center">
-<div class="w-1/2">
+<div class="w-3/5">
     <div class="w-full flex justify-center">
-        <div class="my-5 p-7 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl flex flex-col gap-3">
-            <p class="text-primary-dark dark:text-ternary-light text-xl font-semibold text-left w-80">Farming</p>
+        <div class="my-5 p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl flex flex-col gap-3">
+            <p class="text-primary-dark dark:text-ternary-light text-3xl font-semibold text-left w-80">Farming</p>
             <div class="flex flex-col gap-5">
-                <p class="text-primary-dark dark:text-ternary-light text-sm font-medium text-left">Staking your LP tokens (WMATIC - IBZ on quickswap) and get reward from liquidity mining program.
+                <p class="text-primary-dark dark:text-ternary-light text-md font-medium text-left">Staking your LP tokens (WMATIC - IBZ on quickswap) and get reward from liquidity mining program.
                     When you deposit LP token, you get IBZF token and your rewards will start growing.</p>
-                <p class="text-primary-dark dark:text-ternary-light text-sm font-medium text-left">    
+                <p class="text-primary-dark dark:text-ternary-light text-md font-medium text-left">    
                     When you add or remove liquidity, your rewards are automatically transfer to your wallet.
                 </p>
             </div>

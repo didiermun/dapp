@@ -1,13 +1,13 @@
 <script>
 import ThemeSwitcher from '../ThemeSwitcher';
-import HireMeModal from '../HireMeModal.vue';
+import WallectConnectModal from '../WallectConnectModal.vue';
 import feather from 'feather-icons';
 import AppHeaderLinks from './AppHeaderLinks.vue';
 
 export default {
 	components: {
 		ThemeSwitcher,
-		HireMeModal,
+		WallectConnectModal,
 		AppHeaderLinks,
 	},
 	data() {
@@ -136,7 +136,6 @@ export default {
 				class="hidden sm:flex justify-between items-center flex-col md:flex-row"
 			>
 				<!-- Hire me button -->
-				
 
 				<!-- Theme switcher large screen -->
 				<theme-switcher
@@ -145,7 +144,7 @@ export default {
 					class="mr-8  px-3 py-2 shadow-sm rounded-xl cursor-pointer"
 				/>
 				<div class="hidden md:block">
-					<button >
+					<button  @click="showModal()">
 						<svg 
 						class="text-secondary-dark dark:text-ternary-light" 
 						width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -159,13 +158,14 @@ export default {
 		</div>
 
 		<!-- Hire me modal -->
-		<HireMeModal
+		<WallectConnectModal
 			:showModal="showModal"
 			:modal="modal"
 			:categories="categories"
 			aria-modal="Hire Me Modal"
 		/>
 	</nav>
+	
 </template>
 
 <style scoped>

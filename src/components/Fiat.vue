@@ -1,7 +1,7 @@
 <template>
     <div class="w-full flex justify-center">
         <div class="my-5 p-7 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl flex flex-col gap-3 px-20 py-10">
-            <p class="text-primary-dark dark:text-ternary-light text-3xl font-bold text-left w-80">Fiat On Ramp</p>
+            <p class="text-primary-dark dark:text-ternary-light text-3xl font-bold text-left w-80">Fiat On-Ramp</p>
             <p class="mt-4 text-primary-dark dark:text-ternary-light text-lg font-bold text-left">Select currency and payment method</p>
             <div class="mt-2 flex flex-col gap-4">
             <div class="flex flex-col">
