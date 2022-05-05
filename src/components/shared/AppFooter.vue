@@ -111,7 +111,7 @@ export default {
 							<p class="text-primary-dark dark:text-ternary-light text-xl font-semibold text-left">Subscribe To The Newsletter</p>
 							<div class="flex gap-4 mt-3">
 									<input
-										class="w-full px-5 py-2 bg-dark-blue-dark border-none text-primary-dark dark:text-secondary-light rounded-md shadow-sm text-md"
+										class="w-full px-5 py-2 bg-primary-light border-none text-primary-dark dark:text-secondary-light rounded-md shadow-sm text-md"
 										id="email"
 										name="email"
 										type="text"
