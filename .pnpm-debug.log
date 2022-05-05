@@ -1,0 +1,700 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "vuejs-tailwindcss-portfolio",
+      "version": "0.1.0",
+      "private": true,
+      "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint"
+      },
+      "dependencies": {
+        "@tailwindcss/forms": "^0.3.3",
+        "@tailwindcss/postcss7-compat": "^2.0.2",
+        "autoprefixer": "^9",
+        "core-js": "^3.6.5",
+        "feather-icons": "^4.28.0",
+        "postcss": "^7",
+        "postcss-flexbugs-fixes": "^5.0.2",
+        "postcss-import": "^14.0.2",
+        "postcss-preset-env": "^6.7.0",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+        "vue": "^3.0.0",
+        "vue-backtotop": "^1.6.1",
+        "vue-router": "^4.0.0-0",
+        "vue3-autocounter": "^1.0.6"
+      },
+      "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-plugin-router": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/compiler-sfc": "^3.0.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^7.0.0",
+        "vue-cli-plugin-tailwind": "~2.0.6"
+      },
+      "eslintConfig": {
+        "root": true,
+        "env": {
+          "node": true
+        },
+        "extends": [
+          "plugin:vue/vue3-essential",
+          "eslint:recommended"
+        ],
+        "parserOptions": {
+          "parser": "babel-eslint"
+        },
+        "rules": {}
+      },
+      "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+      ]
+    },
+    "prefix": "/home/didier/Documents/open/dapp"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/home/didier/.pnpm-store/v3",
+    "virtualStoreDir": "/home/didier/Documents/open/dapp/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/home/didier/Documents/open/dapp",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/core-js/3.22.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "core-js",
+      "rawSpec": "^3.6.5"
+    }
+  },
+  "5 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/core-js/3.22.4",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/autoprefixer/9.8.8",
+    "wanted": {
+      "dependentId": ".",
+      "name": "autoprefixer",
+      "rawSpec": "^9"
+    }
+  },
+  "7 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/autoprefixer/9.8.8",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/babel-eslint/10.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "babel-eslint",
+      "rawSpec": "^10.1.0"
+    }
+  },
+  "9 debug pnpm:deprecation": {
+    "deprecated": "babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.",
+    "depth": 0,
+    "pkgId": "registry.npmjs.org/babel-eslint/10.1.0",
+    "pkgName": "babel-eslint",
+    "pkgVersion": "10.1.0",
+    "prefix": "/home/didier/Documents/open/dapp"
+  },
+  "10 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-eslint/10.1.0",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "11 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vue/compiler-sfc/3.2.33",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vue/compiler-sfc",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "12 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/compiler-sfc/3.2.33",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss-flexbugs-fixes/5.0.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "postcss-flexbugs-fixes",
+      "rawSpec": "^5.0.2"
+    }
+  },
+  "14 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-flexbugs-fixes/5.0.2",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "15 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss-preset-env/6.7.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "postcss-preset-env",
+      "rawSpec": "^6.7.0"
+    }
+  },
+  "16 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-preset-env/6.7.1",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "17 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/vue/3.2.33",
+    "wanted": {
+      "dependentId": ".",
+      "name": "vue",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "18 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue/3.2.33",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "19 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/babel-eslint/10.1.0",
+    "size": 9425,
+    "status": "started"
+  },
+  "20 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/vue-router/4.0.15",
+    "wanted": {
+      "dependentId": ".",
+      "name": "vue-router",
+      "rawSpec": "^4.0.0-0"
+    }
+  },
+  "21 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue-router/4.0.15",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "22 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/postcss-flexbugs-fixes/5.0.2",
+    "size": 3274,
+    "status": "started"
+  },
+  "23 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss-import/14.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "postcss-import",
+      "rawSpec": "^14.0.2"
+    }
+  },
+  "24 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-import/14.1.0",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "25 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/postcss-import/14.1.0",
+    "size": 8451,
+    "status": "started"
+  },
+  "26 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/postcss-preset-env/6.7.1",
+    "size": 35196,
+    "status": "started"
+  },
+  "27 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/vue-backtotop/1.6.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "vue-backtotop",
+      "rawSpec": "^1.6.1"
+    }
+  },
+  "28 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue-backtotop/1.6.1",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "29 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vue/cli-plugin-eslint/4.5.17",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vue/cli-plugin-eslint",
+      "rawSpec": "~4.5.0"
+    }
+  },
+  "30 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/cli-plugin-eslint/4.5.17",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "31 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/vue3-autocounter/1.0.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "vue3-autocounter",
+      "rawSpec": "^1.0.6"
+    }
+  },
+  "32 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue3-autocounter/1.0.6",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "33 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/vue-backtotop/1.6.1",
+    "size": 307645,
+    "status": "started"
+  },
+  "34 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vue/cli-service/4.5.17",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vue/cli-service",
+      "rawSpec": "~4.5.0"
+    }
+  },
+  "35 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/cli-service/4.5.17",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "36 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-flexbugs-fixes/5.0.2",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "37 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/vue3-autocounter/1.0.6",
+    "size": 6863,
+    "status": "started"
+  },
+  "38 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-eslint/10.1.0",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "39 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@vue/cli-plugin-eslint/4.5.17",
+    "size": 10804,
+    "status": "started"
+  },
+  "40 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@vue/cli-service/4.5.17",
+    "size": 53731,
+    "status": "started"
+  },
+  "41 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-import/14.1.0",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "42 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-preset-env/6.7.1",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "43 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue3-autocounter/1.0.6",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "44 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/cli-plugin-eslint/4.5.17",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "45 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/cli-service/4.5.17",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "46 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue-backtotop/1.6.1",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "47 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/compiler-sfc/3.2.33",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "found_in_store"
+  },
+  "48 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/core-js/3.22.4",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "found_in_store"
+  },
+  "49 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue/3.2.33",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "found_in_store"
+  },
+  "50 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/vue-router/4.0.15",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "found_in_store"
+  },
+  "51 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/autoprefixer/9.8.8",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "found_in_store"
+  },
+  "52 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/@vue%2Fcli-plugin-babel"
+  },
+  "53 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/@vue%2Fcli-plugin-router"
+  },
+  "54 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/eslint"
+  },
+  "55 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/eslint-plugin-vue"
+  },
+  "56 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/vue-cli-plugin-tailwind"
+  },
+  "57 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/@tailwindcss%2Fforms"
+  },
+  "58 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/@tailwindcss%2Fpostcss7-compat"
+  },
+  "59 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/feather-icons"
+  },
+  "60 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/postcss"
+  },
+  "61 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint/6.8.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint",
+      "rawSpec": "^6.7.2"
+    }
+  },
+  "62 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint/6.8.0",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "63 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vue/cli-plugin-router/4.5.17",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vue/cli-plugin-router",
+      "rawSpec": "~4.5.0"
+    }
+  },
+  "64 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/cli-plugin-router/4.5.17",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "65 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vue/cli-plugin-babel/4.5.17",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vue/cli-plugin-babel",
+      "rawSpec": "~4.5.0"
+    }
+  },
+  "66 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/cli-plugin-babel/4.5.17",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "67 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@tailwindcss/forms/0.3.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@tailwindcss/forms",
+      "rawSpec": "^0.3.3"
+    }
+  },
+  "68 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tailwindcss/forms/0.3.4",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "69 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@vue/cli-plugin-babel/4.5.17",
+    "size": 4907,
+    "status": "started"
+  },
+  "70 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@vue/cli-plugin-router/4.5.17",
+    "size": 3564,
+    "status": "started"
+  },
+  "71 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint/6.8.0",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "found_in_store"
+  },
+  "72 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/cli-plugin-babel/4.5.17",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "73 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@vue/cli-plugin-router/4.5.17",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "74 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tailwindcss/forms/0.3.4",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "found_in_store"
+  },
+  "75 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/eslint-plugin-vue"
+  },
+  "76 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/vue-cli-plugin-tailwind"
+  },
+  "77 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/@tailwindcss%2Fpostcss7-compat"
+  },
+  "78 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/feather-icons"
+  },
+  "79 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/postcss"
+  },
+  "80 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@tailwindcss/postcss7-compat/2.2.17",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@tailwindcss/postcss7-compat",
+      "rawSpec": "^2.0.2"
+    }
+  },
+  "81 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tailwindcss/postcss7-compat/2.2.17",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "82 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@tailwindcss/postcss7-compat/2.2.17",
+    "wanted": {
+      "dependentId": ".",
+      "name": "tailwindcss",
+      "rawSpec": "npm:@tailwindcss/postcss7-compat@^2.0.2"
+    }
+  },
+  "83 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss/7.0.39",
+    "wanted": {
+      "dependentId": ".",
+      "name": "postcss",
+      "rawSpec": "^7"
+    }
+  },
+  "84 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss/7.0.39",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "85 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss/7.0.39",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "found_in_store"
+  },
+  "86 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-vue/7.20.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint-plugin-vue",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "87 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-vue/7.20.0",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "resolved"
+  },
+  "88 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@tailwindcss/postcss7-compat/2.2.17",
+    "size": 3563231,
+    "status": "started"
+  },
+  "89 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/eslint-plugin-vue/7.20.0",
+    "size": 200865,
+    "status": "started"
+  },
+  "90 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-vue/7.20.0",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "91 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tailwindcss/postcss7-compat/2.2.17",
+    "requester": "/home/didier/Documents/open/dapp",
+    "status": "fetched"
+  },
+  "92 error pnpm": {
+    "code": "ERR_PNPM_META_FETCH_FAIL",
+    "attempts": 1,
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "GET https://registry.npmjs.org/vue-cli-plugin-tailwind: request to https://registry.npmjs.org/vue-cli-plugin-tailwind failed, reason: Socket timeout",
+      "code": "ERR_PNPM_META_FETCH_FAIL",
+      "stack": "pnpm: GET https://registry.npmjs.org/vue-cli-plugin-tailwind: request to https://registry.npmjs.org/vue-cli-plugin-tailwind failed, reason: Socket timeout\n    at RetryOperation._fn (/home/didier/.local/share/pnpm-global/5/node_modules/.pnpm/pnpm@6.29.1/node_modules/pnpm/dist/pnpm.cjs:85638:19)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at runNextTicks (node:internal/process/task_queues:65:3)\n    at listOnTimeout (node:internal/timers:526:9)\n    at processTimers (node:internal/timers:500:7)"
+    }
+  }
+}
