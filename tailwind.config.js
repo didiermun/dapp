@@ -12,13 +12,17 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				'primary-light': '#E5E5E5',
+				'primary-light': '#FFFF',
 				'secondary-light': '#F3F3F3',
 				'ternary-light': '#FFFFFF',
+				'dark-blue-light': '#00032A',
 
 				'primary-dark': '#00032A',
 				'secondary-dark': '#080A3E',
 				'ternary-dark': '#FFFFFF',
+				'dark-blue-dark': '#E6E6E6',
+
+				'dense-red': '#E20267',
 			},
 			container: {
 				padding: {
