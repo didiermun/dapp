@@ -17,15 +17,13 @@ export default {
 			isOpen: false,
 			theme: '',
 			modal: false,
-			walletModal: false,
-			loggedIn: false,
-			counter: 0,
+			loggedIn: 0,
 		};
 	},
 
 	created() {
 		this.theme = localStorage.getItem('theme') || 'light';
-		this.loggedIn = localStorage.getItem('loggedIn') || false;
+		this.loggedIn = parseInt(localStorage.getItem('loggedIn') ||  '') || 0;
 	},
 	mounted() {
 		feather.replace();
@@ -35,27 +33,22 @@ export default {
 		updateTheme(theme) {
 			this.theme = theme;
 		},
+		updateLoggedIn(){
+			this.loggedIn = this.loggedIn === 0 ? 1 : 0;
+			this.showModal();
+		},
 		showModal() {
-			if (this.modal || this.walletModal) {
+			if (this.modal) {
 				// Stop screen scrolling
 				document
 					.getElementsByTagName('html')[0]
 					.classList.remove('overflow-y-hidden');
 				this.modal = false;
-				this.walletModal = false;
 			} else {
 				document
 					.getElementsByTagName('html')[0]
 					.classList.add('overflow-y-hidden');
-					if(this.counter === 0){
-						this.modal  = true;
-						this.counter = 1;
-					}
-					else{
-						this.walletModal = true;
-						this.counter = 0;
-					}
-				// this.modal = true;
+				this.modal = true;
 			}
 		},
 	},
@@ -151,14 +144,16 @@ export default {
 		</div>
 
 		<!-- Hire me modal -->
-		<WalletConnectModal
+		<WalletConnectModal v-if="loggedIn == 0"
 			:showModal="showModal"
 			:modal="modal"
+			:updateLoggedIn="updateLoggedIn"
 			aria-modal="Wallet Connect"
 		/>
-		<UserAccountModal
+		<UserAccountModal v-else
 			:showModal="showModal"
-			:modal="walletModal"
+			:modal="modal"
+			:updateLoggedIn="updateLoggedIn"
 			aria-modal="User Account"
 		/>
 		

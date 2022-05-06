@@ -2,7 +2,7 @@
 import feather from 'feather-icons';
 // import Button from './reusable/Button.vue';
 export default {
-	props: ['showModal', 'modal'],
+	props: ['showModal', 'modal', 'updateLoggedIn'],
 	// components: { Button },
 	data() {
 		return {};
@@ -49,17 +49,17 @@ export default {
 								</button>
 							</div>
 							<div class="modal-body p-5 w-full h-full">
-								<form class="max-w-xl mx-4 text-left mb-6">
+								<div class="max-w-xl mx-4 text-left mb-6">
 									<p class="text-primary-dark dark:text-ternary-light text-3xl font-bold text-left w-80">Connect  Wallet</p>
 									<p class="mt-3 text-primary-dark dark:text-ternary-light text-lg font-medium text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 									<div class="flex gap-4 mt-8 justify-center">
-										<div @click="showModal()" class="cursor-pointer bg-primary-dark dark:bg-primary-light flex px-3 py-3 rounded-md">
+										<div @click="updateLoggedIn()" class="cursor-pointer bg-primary-dark dark:bg-primary-light flex px-3 py-3 rounded-md">
 											<img class="w-20 h-20 object-contain" src="@/assets/images/metamask.png" alt="WDC">
 
 
 										</div>
-										<div @click="showModal()" class="cursor-pointer bg-primary-dark dark:bg-primary-light flex px-3 py-3 rounded-md">
+										<div @click="updateLoggedIn()" class="cursor-pointer bg-primary-dark dark:bg-primary-light flex px-3 py-3 rounded-md">
 											<img class="w-20 h-20 object-cover" src="@/assets/images/coinbase.png" alt="WDC">
 
 
@@ -67,14 +67,14 @@ export default {
 
 
 										</div>
-										<div @click="showModal()" class="cursor-pointer bg-primary-dark dark:bg-primary-light flex px-3 py-3 rounded-md">
+										<div @click="updateLoggedIn()" class="cursor-pointer bg-primary-dark dark:bg-primary-light flex px-3 py-3 rounded-md">
 											<img class="w-20 h-20 object-cover" src="@/assets/images/wdc.png" alt="WDC">
 
 
 										</div>
 									</div>
 									
-								</form>
+								</div>
 							</div>
 						</div>
 					</div>

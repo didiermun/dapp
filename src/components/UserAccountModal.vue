@@ -2,7 +2,7 @@
 import feather from 'feather-icons';
 // import Button from './reusable/Button.vue';
 export default {
-	props: ['showModal', 'modal'],
+	props: ['showModal', 'modal', 'updateLoggedIn'],
 	// components: { Button },
 	data() {
 		return {
@@ -65,7 +65,7 @@ export default {
                                         <p class="font-semibold text-lg dark:text-primary-light text-primary-dark">123,289 weth</p>
 
 
-                                        <button class="mt-4 bg-primary-dark dark:bg-white rounded-3xl text-primary-light font-semibold px-8 py-2 dark:text-primary-dark">DISCONNECT</button>
+                                        <button @click="updateLoggedIn()" class="mt-4 bg-primary-dark dark:bg-white rounded-3xl text-primary-light font-semibold px-8 py-2 dark:text-primary-dark">DISCONNECT</button>
                                     </div>
 								</form>
 							</div>
