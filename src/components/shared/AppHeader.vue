@@ -35,6 +35,7 @@ export default {
 		},
 		updateLoggedIn(){
 			this.loggedIn = this.loggedIn === 0 ? 1 : 0;
+			localStorage.setItem('loggedIn', this.loggedIn);
 			this.showModal();
 		},
 		showModal() {
@@ -130,7 +131,7 @@ export default {
 					class="mr-8  px-3 py-2 shadow-sm rounded-xl cursor-pointer"
 				/>
 				<div class="hidden md:block">
-					<button  @click="showModal()">
+					<button  @click="showModal()" v-if="loggedIn == 1">
 						<svg 
 						class="text-secondary-dark dark:text-ternary-light" 
 						width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -138,6 +139,7 @@ export default {
 						</svg>
 
 					</button>
+					<button v-else @click="showModal()" class="bg-primary-dark dark:bg-white rounded-3xl text-primary-light font-semibold px-6 py-2 dark:text-primary-dark">CONNECT WALLET</button>
 				
 				</div>
 			</div>
