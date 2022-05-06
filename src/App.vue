@@ -26,10 +26,11 @@ export default {
 	<div :class="appTheme" class="pt-0.5">
 		<!-- App header -->
 		<AppHeader />
+		<div  class="livello" :class="'livello-'+appTheme">
 
 		<!-- Render active component contents with vue transition -->
 		<transition name="fade" mode="out-in">
-			<div class="livello" :class="'livello-'+appTheme">
+			<div class="full-screen flex justify-center items-center pb-10">
 				<router-view :theme="appTheme" />
 			</div>
 		</transition>
@@ -46,6 +47,7 @@ export default {
 
 		<!-- App footer -->
 		<AppFooter />
+		</div>
 	</div>
 </template>
 
@@ -68,21 +70,23 @@ export default {
 	line-height: 22px;
 }
 
+.full-screen{
+	min-height: 80vh;
+}
 
 .livello {
 	transition: all 0.5s ease-in-out;
-	background-repeat: none;
-	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 .livello-dark {
-	background-image: url('./assets/images/Livello-dark.png');
+	background-image: url('./assets/images/dark-livello.png');
 	
 }
 
-.livelo-light {
-	transition: all 0.5s ease-in-out;
-	background-image: url('./assets/images/Livello-light.png')
+.livello-light {
+	background-image: url('./assets/images/white-livello.png')
 }
 .fade-enter-active {
 	animation: coming 0.4s;
