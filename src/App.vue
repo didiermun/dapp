@@ -29,7 +29,9 @@ export default {
 
 		<!-- Render active component contents with vue transition -->
 		<transition name="fade" mode="out-in">
-			<router-view :theme="appTheme" />
+			<div class="livello">
+				<router-view :theme="appTheme" />
+			</div>
 		</transition>
 
 		<!-- Scroll to top -->
@@ -66,6 +68,13 @@ export default {
 	line-height: 22px;
 }
 
+
+.livello {
+	transition: all 0.5s ease-in-out;
+	background-image: url('./assets/images/Livello.png');
+	background-repeat: none;
+	background-size: cover;
+}
 .fade-enter-active {
 	animation: coming 0.4s;
 	animation-delay: 0.2s;
