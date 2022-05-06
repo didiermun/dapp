@@ -29,7 +29,7 @@ export default {
 
 		<!-- Render active component contents with vue transition -->
 		<transition name="fade" mode="out-in">
-			<div class="livello">
+			<div class="livello" :class="'livello-'+appTheme">
 				<router-view :theme="appTheme" />
 			</div>
 		</transition>
@@ -71,9 +71,18 @@ export default {
 
 .livello {
 	transition: all 0.5s ease-in-out;
-	background-image: url('./assets/images/Livello.png');
 	background-repeat: none;
 	background-size: cover;
+}
+
+.livello-dark {
+	background-image: url('./assets/images/Livello-dark.png');
+	
+}
+
+.livelo-light {
+	transition: all 0.5s ease-in-out;
+	background-image: url('./assets/images/Livello-light.png')
 }
 .fade-enter-active {
 	animation: coming 0.4s;
