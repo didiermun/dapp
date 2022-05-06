@@ -18,12 +18,14 @@ export default {
 			theme: '',
 			modal: false,
 			walletModal: false,
+			loggedIn: false,
 			counter: 0,
 		};
 	},
 
 	created() {
 		this.theme = localStorage.getItem('theme') || 'light';
+		this.loggedIn = localStorage.getItem('loggedIn') || false;
 	},
 	mounted() {
 		feather.replace();
