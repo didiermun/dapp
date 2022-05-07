@@ -60,10 +60,10 @@ export default {
 </script>
 
 <template>
-	<nav id="nav" class="sm:container sm:mx-auto">
+	<nav id="nav" class="md:container sm:mx-auto">
 		<!-- Header start -->
 		<div
-			class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6"
+			class="z-10 max-w-screen-lg xl:max-w-screen-xl block md:flex md:justify-between md:items-center my-6"
 		>
 			<!-- Header menu links and small screen hamburger menu -->
 			<div class="flex justify-between items-center px-4 sm:px-0">
@@ -80,7 +80,7 @@ export default {
 				</div>
 
 				<!-- Small screen hamburger menu -->
-				<div class="sm:hidden">
+				<div class="md:hidden">
 					<button
 						@click="isOpen = !isOpen"
 						type="button"
@@ -113,7 +113,7 @@ export default {
 
 			<!-- Header right section buttons -->
 			<div
-				class="hidden sm:flex justify-between items-center flex-col md:flex-row"
+				class="hidden md:flex justify-between items-center flex-col md:flex-row"
 			>
 				<!-- Hire me button -->
 

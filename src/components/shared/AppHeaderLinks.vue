@@ -12,43 +12,43 @@ export default {
 	<!-- Header links -->
 	<div
 		:class="isOpen ? 'block' : 'hidden'"
-		class="m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none"
+		class="m-0 md:ml-4 mt-5 md:mt-3 md:flex p-5 md:p-0 justify-center items-center shadow-lg md:shadow-none"
 	>
 		<router-link
 			to="/"
-			class=" block text-left text-sm font-semibold text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 "
+			class=" block text-left text-md font-semibold text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  md:mx-4 mb-2 md:py-2 "
 			aria-label="Projects"
 			>Home</router-link
 		>
 		<router-link
 			to="/swap"
-			class=" block text-left text-sm font-semibold text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
+			class=" block text-left text-md font-semibold text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  md:mx-4 mb-2 md:py-2 pt-3 md:pt-2 md:border-t-0 border-primary-light dark:border-secondary-dark"
 			aria-label="About Me"
 			>Swap</router-link
 		>
 		<router-link
 			to="/govern"
-			class=" block text-left text-sm font-semibold text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
+			class=" block text-left text-md font-semibold text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  md:mx-4 mb-2 md:py-2 pt-3 md:pt-2 md:border-t-0 border-primary-light dark:border-secondary-dark"
 			aria-label="Contact"
 			>Governance</router-link
 		>
 		<router-link
 			to="/fiat"
-			class="font-semibold block text-left text-sm text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
+			class="font-semibold block text-left text-md text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  md:mx-4 mb-2 md:py-2 pt-3 md:pt-2 md:border-t-0 border-primary-light dark:border-secondary-dark"
 			aria-label="About Me"
 			>Fiat-On-Ramp</router-link
 		>
 		<router-link
 			to="/farming"
-			class=" block text-left text-sm font-semibold text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
+			class=" block text-left text-md font-semibold text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  md:mx-4 mb-2 md:py-2 pt-3 md:pt-2 md:border-t-0 border-primary-light dark:border-secondary-dark"
 			aria-label="Contact"
 			>Farming</router-link
 		>
 		<div
-			class="sm:hidden pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark flex gap-12 justify-center"
+			class="md:hidden pt-3 md:pt-0 md:border-t-0 border-primary-light dark:border-secondary-dark flex gap-12 justify-center"
 		>
 			<!-- <button
-				class=" sm:hidden block text-left text-md font-semibold bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-500"
+				class=" md:hidden block text-left text-md font-semibold bg-indigo-500 hover:bg-indigo-600 text-white shadow-md rounded-md px-4 py-2 mt-2 duration-500"
 				@click="showModal()"
 				aria-label="Hire Me Button"
 			> -->
@@ -64,7 +64,7 @@ export default {
 					<theme-switcher
 					:theme="theme"
 					@themeChanged="updateTheme"
-					class="block sm:hidden  rounded-lg"
+					class="block md:hidden  rounded-lg"
 				/>
 			<!-- </button> -->
 		</div>
