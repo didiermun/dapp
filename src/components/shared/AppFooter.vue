@@ -48,8 +48,8 @@ export default {
 			<div
 				class="flex flex-col justify-center items-center mb-12 sm:mb-20"
 			>
-				<div class="flex gap-4 w-full justify-center">
-					<div class="flex flex-col w-2/5">
+				<div class="block md:flex gap-4 w-full justify-center">
+					<div class="flex flex-col w-full md:w-2/5">
 						<div class="flex gap-2">
 							<img
 								src="@/assets/images/logo.png"
@@ -63,7 +63,7 @@ export default {
 						</p>
 					</div>
 
-					<div class="flex flex-col w-2/5 mt-7 px-5">
+					<div class="flex flex-col w-full md:w-2/5 mt-7 px-5">
 						<div class="flex flex-col px-6 w-full justify-start">
 							<p class="text-primary-dark dark:text-ternary-light text-xl font-semibold text-left">Follow Us</p>
 							<div class="flex gap-4 mt-3">
