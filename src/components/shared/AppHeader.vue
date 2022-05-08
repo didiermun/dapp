@@ -121,7 +121,7 @@ export default {
 				<theme-switcher
 					:theme="theme"
 					@themeChanged="updateTheme"
-					class="mr-8  px-3 py-2 shadow-sm rounded-xl cursor-pointer"
+					class="mr-8  px-3 py-2 cursor-pointer"
 				/>
 				<div class="hidden md:block">
 					<button  @click="showModal()" v-if="loggedIn == 1">
