@@ -1,97 +1,62 @@
-;; Lab6 -- Partial LC3 code  
-;;      
-;; The two sensor values LR are placed in the Line Sensor Data Register (LSDR), 
-;; a memory-mapped device register. 
-;; The LSDR is mapped to LC-3 address 0x4000.  
-;; Bits 1-0 correspond to the LR sensor values.  
-;; The remaining bits of the LSDR are unused. 
-;; You should ignore Bits 15-2.  
-;; 
-;; Wheel Drive Control Register (WDCR).  
-;; This is an output register mapped to address 0x4010.  
-;; Bits 3-0 control the left-front, right-front, left-rear,  
-;; and right-rear motors respectively. For each of these control bits,  
-;; setting it to zero moves it forward and setting it to one moves it
-;; backward.  
-;; For example, the binary value 0000 would steer the car forward and  
-;; the value 1010 would cause the car to turn to the left.  
-;; Bits 15-4 of WDCR are unused. You can write to WDCR  
-;; by storing the value you wish to address 0x4010.  
- 
-; set the starting address at location x3000 
- 
 .orig x3000
 
-;; main loop Label
+; Load the address of the LSDR into R2
+LEA R2, LSDR
+; Load the address of the WDCR into R3
+LEA R3, WDCR
+
 CHECK_SENSORS
+; Load sensor value from memory-mapped LSDR
+LDR R0, R2, #0 ; R0 now contains the sensor value
 
-LDI R0, LSDR   ; load data from sensor register LSDR
+; Isolate the 2 LSBs (sensor inputs)
+AND R0, R0, #3
 
-;; Mask LR sensor inputs
-AND R0,R0,#3   ; R0 = LOWER 2 BITS SENSOR inputs ONLY
+; Check if on track (11)
+ADD R1, R0, #-3 ; Subtract 3, if result is 0, then on track
+BRz DRIVE_STRAIGHT
 
-ADD R1, R0, #-3   ; LR = 11 means on track
-      ; So, if R1 = R0- 3 = 0, on the track
-BRz DRIVE_STRAIGHT  ; command drive straight
+; Check if off track to the left (01)
+ADD R1, R0, #-1 ; Subtract 1, if result is 0, then off to the left
+BRz TURN_RIGHT
 
-;; Test LR=01 (off track to left)
-ADD R2, R0, #-1     ; Isolate right bit
-BRz TURN_LEFT      ; If right bit is 0 (and left bit must be 1), turn left
+; Check if off track to the right (10)
+ADD R1, R0, #-2 ; Subtract 2, if result is 0, then off to the right
+BRz TURN_LEFT
 
-;; Test LR=10 (off track to right)
-ADD R3, R0, #-2     ; Isolate left bit
-BRz TURN_RIGHT     ; If left bit is 0 (and right bit must be 1), turn right
-
-;; Test LR=00 (completely off track)
-BRnp TURN_WHAT     ; If neither bit is set, handle accordingly
-
-;; loop back to read sensors again
-BR CHECK_SENSORS
+; If none of the above, assume completely off track (00)
+BR TURN_WHAT
 
 DRIVE_STRAIGHT
-
-AND R0, R0, #0
-ADD R0, R0, #0    ; WDCR = 0000, drive straight
-STI R0, WDCR
-ST R0, LAST_COMMAND
+; Set WDCR to drive straight (0000)
+AND R1, R1, #0 ; Clear R1
+STR R1, R3, #0 ; Store directly to WDCR, assuming direct address
 BR CHECK_SENSORS
 
 TURN_RIGHT
-AND R0, R0, #0
-ADD R0, R0, #5    ; WDCR = 0101, turn right (left-front and right-rear backward)
-STI R0, WDCR
-ST R0, LAST_COMMAND
+; Set WDCR to turn right (specific value needed, assuming 0001 for example)
+AND R1, R1, #0
+ADD R1, R1, #1 ; Example value for turning right
+STR R1, R3, #0 ; Store directly to WDCR
 BR CHECK_SENSORS
 
 TURN_LEFT
-AND R0, R0, #0
-ADD R0, R0, #10   ; WDCR = 1010, turn left (right-front and left-rear backward)
-STI R0, WDCR
-ST R0, LAST_COMMAND
+; Set WDCR to turn left (specific value needed, assuming 0010 for example)
+AND R1, R1, #0
+ADD R1, R1, #2 ; Example value for turning left
+STR R1, R3, #0 ; Store directly to WDCR
 BR CHECK_SENSORS
 
 TURN_WHAT
-;; Decide based on previous commands or a default safe behavior, for example, stop or turn right to search for track
-AND R0, R0, #0     ; Clear R0
-ADD R0, R0, #15   ; WDCR = 1111, for example, stop or any safe default
-STI R0, WDCR
-ST R0, LAST_COMMAND
+; Implement logic for completely off track, setting motors accordingly
+; For example, stop or search for track
+AND R1, R1, #0 ; Clear R1
+; Assuming stopping or a safe default
+STR R1, R3, #0 ; Store directly to WDCR
 BR CHECK_SENSORS
 
-;; always use HALT at the end of your main program
 HALT
 
-;; The following section will be data definition
-;; LAST_COMMAND was initialized to go straight.
-;; It should be used to store the last motor commands.
-LAST_COMMAND
-.FILL x00ff
-
-;;; Don't change the following definitions for sensors and motor commands
-LSDR
-.FILL x4000
-WDCR
-.FILL x4010
-
-;; You always need the following instruction to end the program
+LSDR .FILL x4000
+WDCR .FILL x4010
 .END
