@@ -27,7 +27,10 @@ WAIT_FOR_KEY
  ;; You will put the converted index number in R0! 
  ;; R0 should be in the range of 0-8,  
  ;;
-ADD R0, R0, #-48
+ADD R0, R0, #-12
+ADD R0, R0, #-12
+ADD R0, R0, #-12
+ADD R0, R0, #-12
 
  ;; However, let's doubtcheck it for safety. 
  ;; WRITE you codes here to check if R0 is out of range 
