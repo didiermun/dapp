@@ -127,3 +127,6 @@ NOTE_FREQ_ARR
 NOTE_ARRAY
  .BLKW 32
  .END
+
+
+ https://docs.google.com/document/d/1IW5qaCf-BA2MvEBO492zpYUX46w08BmRLkFbcrdIEx0/edit?usp=sharing
