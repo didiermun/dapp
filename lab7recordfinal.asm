@@ -128,45 +128,42 @@ STI R0, FGCR_ADDR  	; Write zero to FGCR to stop the note
  ;;
  BR WAIT_FOR_KEY  ; repeat
  ;;
- PLAYBACK
- AND R4, R4, #0      ; Reset last key pressed
- AND R5, R5, #0      ; Reset consecutive press counter
- LEA R4, NOTE_ARRAY  ; Load the address of the start of NOTE_ARRAY into R4
- AND R6, R6, #0        ; Reset R6 (index) to zero
+ ; Start playback
+PLAYBACK
+    LD R6, COUNTER       ; Load the total number of recorded notes into R6
+    LEA R4, NOTE_ARRAY   ; Load the address of the start of NOTE_ARRAY into R4
+    AND R7, R7, #0       ; Reset the playback counter (R7 keeps track of notes played)
 
+; Playback loop
 PLAYBACK_LOOP
- LDR R0, R4, #0       ; Load the next note index into R0
- LEA R6, NOTE_ARRAY
- NOT R6, R6
- ADD R6, R6, #1 
+    ADD R0, R7, R6       ; Compare the number of notes played with the total count
+    BRz END_PLAYBACK     ; If all notes have been played, end playback
+    LDR R0, R4, #0       ; Load the next note index into R0
+    ADD R4, R4, #1       ; Move to the next note in NOTE_ARRAY
+    ADD R7, R7, #1       ; Increment the playback counter
 
+    ; Play the note
+    LEA R2, NOTE_FREQ_ARR ; Load the address of the note frequency array into R2
+    ADD R2, R2, R0        ; Add the index to get the address of the specific note frequency
+    LDR R1, R2, #0        ; Load the frequency value into R1 from the array
+    STI R1, FGDR_ADDR     ; Store the frequency in FGDR to set the note frequency
+    AND R1, R1, #0        ; Clear R1
+    ADD R1, R1, #1        ; Set R1 to a non-zero value
+    STI R1, FGCR_ADDR     ; Write a non-zero value to FGCR to start playing the note
 
- ADD R6, R6, R0
- NOT R6, R0
- ADD R6, R6, #1
- LD R7, COUNTER 
- ADD R6, R7, R6
- BRn WAIT_FOR_KEY     ; If the loaded value is greater than record count, wait for key
+    ; Optional: Insert delay here to control note duration
 
- ADD R4, R4, #1       ; Move to the next note in NOTE_ARRAY 
+    ; Simulate key release (stop the note)
+    AND R1, R1, #0        
+    STI R1, FGCR_ADDR     ; Set FGCR to zero to stop the note
 
+    BR PLAYBACK_LOOP      ; Loop back to play the next note 
 
- LEA R2, NOTE_FREQ_ARR   ; Load the address of the note frequency array into R2
- ADD R2, R2, R0          ; Add the index to get the address of the specific note frequency
- LDR R1, R2, #0          ; Load the frequency value into R1 from the array
- STI R1, FGDR_ADDR       ; Store the frequency in FGDR to set the note frequency
- AND R1, R1, #0          ; Clear R1
- ADD R1, R1, #1          ; Set R1 to a non-zero value
- STI R1, FGCR_ADDR       ; Write a non-zero value to FGCR to start playing the note
+; End of playback
+END_PLAYBACK
+    ; Additional logic or cleanup can go here
+    BR WAIT_FOR_KEY       ; Go back to waiting for key press
 
- AND R1, R1, #0 
- STI R1, FGCR_ADDR 
- 
- BR PLAYBACK_LOOP     ; Loop back to play the next note 
-
- AND R1, R1, #0            ; Clear R1 (simulating release)
- STI R1, FGCR_ADDR         ; Set FGCR to zero to stop the note
- BR WAIT_FOR_RELEASE
 
  HALT
 
