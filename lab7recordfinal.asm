@@ -152,7 +152,8 @@ PLAYBACK_LOOP
  ADD R1, R1, #1          ; Set R1 to a non-zero value
  STI R1, FGCR_ADDR       ; Write a non-zero value to FGCR to start playing the note
 
- LD R6, COUNT
+ AND R6, R6, #0
+ ADD R6, R6, #15
 
 DELAY
  ADD R6, R6, #-1
@@ -160,10 +161,10 @@ DELAY
  BR DELAY
 
 END_DELAY
- AND R1, R1, #0            ; Clear R1 (simulating release)
+ AND R1, R1, #0 
  STI R1, FGCR_ADDR 
  
- LD R6, NO_PLAY
+ ADD R6, R6, #15
 
 NO_TONE
  ADD R6, R6, #-1
@@ -179,8 +180,7 @@ NEXT_KEY
 
  HALT
 
-COUNT .FILL #1000
-NO_PLAY .FILL #300
+
  
 ;; LABEL DEFINITIONS
 ;; 9 numeric keys
