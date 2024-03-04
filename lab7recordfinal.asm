@@ -152,7 +152,25 @@ PLAYBACK_LOOP
  ADD R1, R1, #1          ; Set R1 to a non-zero value
  STI R1, FGCR_ADDR       ; Write a non-zero value to FGCR to start playing the note
 
+ LD R6, COUNT
 
+DELAY
+ ADD R6, R6, #-1
+ BRz END_DELAY
+ BR DELAY
+
+END_DELAY
+ AND R1, R1, #0            ; Clear R1 (simulating release)
+ STI R1, FGCR_ADDR 
+ 
+ LD R6, NO_PLAY
+
+NO_TONE
+ ADD R6, R6, #-1
+ BRz NEXT_KEY
+ BR NO_TONE
+
+NEXT_KEY
  BR PLAYBACK_LOOP     ; Loop back to play the next note 
 
  AND R1, R1, #0            ; Clear R1 (simulating release)
@@ -197,3 +215,9 @@ NOTE_ARRAY
 COUNTER
  .BLKW 1
  .END
+
+COUNT 
+.FILL #1000
+NO_PLAY
+.FILL #300
+
