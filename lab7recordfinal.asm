@@ -8,6 +8,8 @@
  LEA R3, NOTE_ARRAY  ; Load the starting address of NOTE_ARRAY into R3
 
  AND R0 ,R0,#0
+ ST R0, COUNTER 
+
  STI R0, FGCR_ADDR ; mem[x440a] = R0 = 0
  	; set FGCR = 0 to stop playing note
  BR WAIT_FOR_KEY
@@ -165,6 +167,7 @@ PLAYBACK_LOOP
  ADD R6, R6, #15
  ADD R6, R6, #15
  ADD R6, R6, #15
+ ADD R6, R6, #15
 
 DELAY
  ADD R6, R6, #-1
@@ -175,6 +178,7 @@ END_DELAY
  AND R1, R1, #0 
  STI R1, FGCR_ADDR 
  
+ ADD R6, R6, #15
  ADD R6, R6, #15
  ADD R6, R6, #15
 
