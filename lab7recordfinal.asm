@@ -5,6 +5,8 @@
  
  .ORIG X3000
  ;; initially, stop any note playing by setting FGCR to zero
+ LEA R3, NOTE_ARRAY  ; Load the starting address of NOTE_ARRAY into R3
+
  AND R0 ,R0,#0
  STI R0, FGCR_ADDR ; mem[x440a] = R0 = 0
  	; set FGCR = 0 to stop playing note
@@ -44,7 +46,11 @@ BRp WAIT_FOR_KEY ; If positive, R0 was greater than 8, wait for another key
 
  STR R0, R3, #0  ; Store the index (R0) in NOTE_ARRAY at the current position (R3)
  ADD R3, R3, #1  ; Increment the position for the next note
- ADD R8, R8, #1  ; INCREMENT COUNTER
+
+ ;; Updated counter value
+ LD R6, COUNTER    ; Load the current counter value into R6
+ ADD R6, R6, #1    ; Increment the counter
+ ST R6, COUNTER    ; Store the updated counter back to memory
 
 
  ;; check pattern for PLAYBACK
@@ -131,7 +137,8 @@ PLAYBACK_LOOP
 
  NOT R6, R0
  ADD R6, R6, #1
- ADD R6, R8, R6
+ LD R7, COUNTER
+ ADD R6, R7, R6
  BRn WAIT_FOR_KEY     ; If the loaded value is greater than record count, wait for key
 
  ADD R4, R4, #1       ; Move to the next note in NOTE_ARRAY 
@@ -151,7 +158,7 @@ PLAYBACK_LOOP
  AND R1, R1, #0            ; Clear R1 (simulating release)
  STI R1, FGCR_ADDR         ; Set FGCR to zero to stop the note
  BR WAIT_FOR_RELEASE
- 
+
  HALT
  
 ;; LABEL DEFINITIONS
@@ -187,4 +194,6 @@ NOTE_FREQ_ARR
 ;; RESERVE some memory for recording application
 NOTE_ARRAY
  .BLKW 32
+COUNTER
+ .BLKW 1
  .END
