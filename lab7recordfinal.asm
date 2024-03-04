@@ -7,7 +7,7 @@
  ;; initially, stop any note playing by setting FGCR to zero
  LEA R3, NOTE_ARRAY  ; Load the starting address of NOTE_ARRAY into R3
 
- AND R0 ,R0,#0
+ AND R0, R0, #0
  ST R0, COUNTER 
 
  STI R0, FGCR_ADDR ; mem[x440a] = R0 = 0
@@ -136,10 +136,15 @@ STI R0, FGCR_ADDR  	; Write zero to FGCR to stop the note
 
 PLAYBACK_LOOP
  LDR R0, R4, #0       ; Load the next note index into R0
+ LEA R6, NOTE_ARRAY
+ NOT R6, R6
+ ADD R6, R6, #1 
 
+
+ ADD R6, R6, R0
  NOT R6, R0
  ADD R6, R6, #1
- LD R7, COUNTER
+ LD R7, COUNTER 
  ADD R6, R7, R6
  BRn WAIT_FOR_KEY     ; If the loaded value is greater than record count, wait for key
 
